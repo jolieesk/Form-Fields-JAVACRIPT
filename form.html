@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>the Fronion - International News that Doesn’t Stink</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script>
+	//function to cleat the default data from the name value input, will not erase user input text
+		function clearName() {
+		if (document.getElementById('nameField').value == 'First and Last Name') {
+			document.getElementById('nameField').value = '';
+		}
+		}
+
+		function clearPhone() {
+			if (document.getElementById('phoneField').value == 'example: 212-123-1234') {
+				document.getElementById('phoneField').value = '';
+			}
+		}
+//function to bring back default text if name field is empty disabled
+
+	function resetName() {
+	if (document.getElementById('nameField').value == '') {
+		document.getElementById('nameField').value = 'First and Last Name';
+	}
+	}
+
+	function clearEmail() {
+	if (document.getElementById('emailField').value == 'example@gmail.com') {
+		document.getElementById('emailField').value = '';
+	}
+	}
+
+	</script>
+
+</head>
+<body>
+<header>
+	<div class="contentWrapper">
+		<div id="fronionLogo">
+			<img src="img/fronion-logo.png" width="250" alt="the Fronion: News That Doesn’t Stink">
+		</div>
+	</div>
+</header>
+<main role="main">
+	<div class="contentWrapper">
+		<form action="" method="post" name="signUpForm" id="signUpForm">
+			<fieldset id="signUp">
+				<legend>Sign Up For Text Alerts</legend>
+
+					<label for="nameField">Name:</label>
+					<input id="nameField" name="nameField" type="text" class="textfield"
+					value="First and Last Name" onFocus="clearName();"
+					onFocus="clearName();" onBlur="resetName();">
+
+					<label for="phoneField">Phone:</label>
+					<input id="phoneField" name="phoneField" type="text" class="textfield" value="example: 212-123-1234"
+					value="example: 212-123-1234" onFocus="clearPhone();"
+					onFocus="clearPhone();" onBlur="resetPhone();">
+
+					<label for="emailField">Email:</label>
+					<input id="emailField" name="emailField" type="text" class="textfield" value="example@gmail.com"
+					value="example@gmail.com" onFocus="clearEmail();"
+					onFocus="clearEmail();" onBlur="resetEmail();">
+
+					<input id="submit" type="submit" name="submit" value="Sign Me Up!">
+
+			</fieldset>
+		</form>
+	</div>
+</main>
+<footer>
+	<div class="contentWrapper">Copyright The Fronion - All Rights Reserved</div>
+</footer>
+</body>
+</html>
